@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <meta charset="UTF-8">
+    <title>Produto</title>
+</head>
+<body>
+<h1>Produto</h1><br>
+<table>
+        <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+        </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>{{produto.nome}}</td>
+                    <td>{{produto.preco}}</td>
+                    <td>{{produto.quantidade}}</td>
+                </tr>
+        </tbody>
+    </table>
+    <h3><a href="{% url 'index' %}">Voltar</a></h3>
+</body>
+</html>
